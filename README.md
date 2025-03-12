@@ -1,4 +1,4 @@
-# Game Programming Patterns - Implementations in GDScript and JavaScript
+# Game Programming Patterns - Implementations in<!-- GDScript and--> JavaScript
 
 This repository contains practical implementations of **Design Patterns** for game development, based on the book [Game Programming Patterns by Robert Nystrom](https://gameprogrammingpatterns.com/).
 
@@ -6,7 +6,7 @@ Each pattern is accompanied by:
 
 - 📖 A theoretical explanation from the book
 - 🎮 Examples of use in video games
-- 💻 Practical implementations in **GDScript (Godot)** and **JavaScript**
+- 💻 Practical implementations in<!--**GDScript (Godot)** and--> **JavaScript**
 
 ## 📂 Repository Structure
 
@@ -22,6 +22,8 @@ example:
 
 - Includes `README.md` with the **description of the Command Pattern**
 
+<!--
+
 ### 2️. `gdscript/` - Implementations in Godot
 
 Contains **GDScript** implementations of the patterns with practical exercises.
@@ -35,6 +37,9 @@ Each pattern has its own folder (`command/`, etc.) with:
 - `ex_N_title/`
   
   Contains the file `ex_N_title.gd` with the exercise implementation.
+
+-->
+
 
 ### 3️. `javascript/` - Implementations in JavaScript
 
@@ -120,7 +125,7 @@ Read the explanations in **`patterns/`** to understand how each pattern works.
 
 - Study and implement the main **Design Patterns** used in video games.
 - Write **clear**, **organized**, and **reusable** code.
-- Improve programming skills in **Godot** and **JavaScript**.
+- Improve programming skills in <!--**Godot** and--> **JavaScript**.
 
 <!--
     If you have suggestions or want to contribute, feel free to open an issue or a pull request! 🚀
