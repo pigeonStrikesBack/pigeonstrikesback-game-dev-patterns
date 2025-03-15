@@ -65,7 +65,7 @@ Same structure as `gdscript/` but with code written in **JavaScript**.
 >
 > Revisited by [Robert Nystrom](https://stuffwithstuff.com/)
 
-- 🚧 [Command Pattern](patterns/command/README.md)
+- ✅ [Command Pattern](patterns/command/README.md)
 - 🚧 [Flyweight Pattern](#)
 - 🚧 [Observer Pattern](#)
 - 🚧 [Prototype Pattern](#)
