@@ -1,0 +1,7 @@
+body { background: black; color: white; }
+canvas { background: white; }
+div:has(> canvas) {
+    padding: 15px 0em;
+    display: flex;
+    justify-content: center;
+}
