@@ -66,7 +66,7 @@ Same structure as `gdscript/` but with code written in **JavaScript**.
 > Revisited by [Robert Nystrom](https://stuffwithstuff.com/)
 
 - ✅ [Command Pattern](patterns/command/README.md)
-- 🚧 [Flyweight Pattern](#)
+- ✅ [Flyweight Pattern](patterns/Flyweight/README.md)
 - 🚧 [Observer Pattern](#)
 - 🚧 [Prototype Pattern](#)
 - 🚧 [Singleton Pattern](#)
@@ -118,8 +118,8 @@ Read the explanations in **`patterns/`** to understand how each pattern works.
 
 ### 3️. Try the Code
 
-- To test the patterns in **Godot**, open the `gdscript/` folder in your project.
-- To test the patterns in **JavaScript**, you can open the `.js` files in a browser using a simple `index.html`.
+<!-- - To test the patterns in **Godot**, open the `gdscript/` folder in your project. -->
+- To test the patterns in **JavaScript**, you can open the exercise in browser using the provided `index.html`.
 
 ## 🎯 Project Goals
 
