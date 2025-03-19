@@ -23,130 +23,111 @@ The Flyweight Pattern is a technique for optimizing performance and memory usage
 
 ## General Examples
 
-### Example 1: Rendering thousands of trees with shared sprites in 2D  
+### Example 1: Rendering thousands of trees with shared models
 
-We have a `TreeType` object holding a shared texture, tint color, and possibly size. Each `Tree` only stores its position and refers to the shared `TreeType`.  
+We have a TreeType object holding shared texture, color, and model data. Each Tree only stores its coordinates and refers to the shared TreeType.
 
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+js
 class TreeType {
-  constructor(texture, color, size) {
-    this.texture = texture; // In PixiJS, this would be a PIXI.Texture
-    this.color = color;     // Tint or color filter
-    this.size = size;       // Width/height scaling
-  }
+constructor(texture, color, model) {
+  this.texture = texture;
+  this.color = color;
+  this.model = model;
+}
 
-  draw(x, y) {
-    console.log(`Drawing tree at (${x}, ${y}) with color ${this.color} and size ${this.size}`);
-    // In PixiJS, you would do something like:
-    // const sprite = new PIXI.Sprite(this.texture);
-    // sprite.tint = this.color;
-    // sprite.x = x; sprite.y = y;
-    // sprite.scale.set(this.size, this.size);
-    // app.stage.addChild(sprite);
-  }
+draw(x, y) {
+  console.log(`Drawing tree at (${x}, ${y}) with ${this.color} color`);
+}
 }
 
 class TreeFactory {
-  constructor() {
-    this.treeTypes = {};
-  }
+constructor() {
+  this.treeTypes = {};
+}
 
-  getTreeType(texture, color, size) {
-    const key = `${texture}-${color}-${size}`;
-    if (!this.treeTypes[key]) {
-      this.treeTypes[key] = new TreeType(texture, color, size);
-    }
-    return this.treeTypes[key];
+getTreeType(texture, color, model) {
+  const key = `${texture}-${color}-${model}`;
+  if (!this.treeTypes[key]) {
+    this.treeTypes[key] = new TreeType(texture, color, model);
   }
+  return this.treeTypes[key];
+}
 }
 
 class Tree {
-  constructor(x, y, type) {
-    this.x = x;
-    this.y = y;
-    this.type = type;
-  }
-
-  draw() {
-    this.type.draw(this.x, this.y);
-  }
+constructor(x, y, type) {
+  this.x = x;
+  this.y = y;
+  this.type = type;
 }
 
-// Example usage:
+draw() {
+  this.type.draw(this.x, this.y);
+}
+}
+
+// Example usage
 const factory = new TreeFactory();
-const forest = [];
+const trees = [];
+trees.push(new Tree(10, 20, factory.getTreeType("pine.png", "green", "pineModel")));
+trees.push(new Tree(30, 40, factory.getTreeType("pine.png", "green", "pineModel")));
+trees.forEach(tree => tree.draw());
 
-forest.push(new Tree(100, 150, factory.getTreeType("treeTexture.png", 0x00FF00, 1.2)));
-forest.push(new Tree(200, 180, factory.getTreeType("treeTexture.png", 0x00FF00, 1.2)));
-forest.push(new Tree(250, 160, factory.getTreeType("treeTexture.png", 0x228B22, 0.8)));
 
-// Draw all trees
-forest.forEach(tree => tree.draw());
-```
-</details>  
+</details>
 
----
+### Example 2: Bullet pooling with shared projectile model
 
-### Example 2: Reusing a bullet sprite in a 2D top-down shooter  
-
-We store a shared bullet texture in `BulletModel` and spawn `Bullet` instances that only hold position and direction data.  
+A bullet pool stores a shared bullet model and reuses it, rather than creating new models for each bullet fired.
 
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+js
 class BulletModel {
-  constructor(texture) {
-    this.texture = texture; // In PixiJS this will be a PIXI.Texture
-  }
+constructor(mesh) {
+  this.mesh = mesh; // Shared mesh
+}
 
-  render(x, y, angle) {
-    console.log(`Rendering bullet at (${x}, ${y}) with angle ${angle}`);
-    // With PixiJS:
-    // const sprite = new PIXI.Sprite(this.texture);
-    // sprite.x = x; sprite.y = y;
-    // sprite.rotation = angle;
-    // app.stage.addChild(sprite);
-  }
+render(x, y, angle) {
+  console.log(`Rendering bullet at (${x}, ${y}) with angle ${angle}`);
+}
 }
 
 class Bullet {
-  constructor(x, y, angle, model) {
-    this.x = x;
-    this.y = y;
-    this.angle = angle;
-    this.model = model;
-  }
-
-  update() {
-    const speed = 8;
-    this.x += Math.cos(this.angle) * speed;
-    this.y += Math.sin(this.angle) * speed;
-  }
-
-  render() {
-    this.model.render(this.x, this.y, this.angle);
-  }
+constructor(x, y, angle, model) {
+  this.x = x;
+  this.y = y;
+  this.angle = angle;
+  this.model = model;
 }
 
-// Usage example:
-const bulletModel = new BulletModel("bulletTexture.png");
-const bullets = [
-  new Bullet(300, 300, 0, bulletModel),
-  new Bullet(320, 300, Math.PI / 6, bulletModel),
-  new Bullet(340, 300, Math.PI / 4, bulletModel)
-];
+update() {
+  this.x += Math.cos(this.angle) * 10;
+  this.y += Math.sin(this.angle) * 10;
+}
 
-// Simulate updating and rendering
-bullets.forEach(bullet => {
-  bullet.update();
-  bullet.render();
-});
-```
-</details>  
+render() {
+  this.model.render(this.x, this.y, this.angle);
+}
+}
+
+// Usage
+const bulletModel = new BulletModel("bulletMesh");
+const bullet1 = new Bullet(100, 100, 0, bulletModel);
+const bullet2 = new Bullet(150, 150, Math.PI / 4, bulletModel);
+
+bullet1.update();
+bullet1.render();
+
+bullet2.update();
+bullet2.render();
+
+
+</details>
 
 ## PROS and CONS
 
