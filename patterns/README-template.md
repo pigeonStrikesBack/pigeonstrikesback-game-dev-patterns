@@ -1,0 +1,77 @@
+# pattern-name Pattern
+
+📑 [Click here](./pattern-name.md) if you wanna read more about this pattern
+
+## Definition
+
+### Gang of Four's definition  
+
+Gang of Four definition
+
+### Robert Nystrom's definition  
+
+Robert Nystrom definition
+
+### AI-generated definition  
+
+ai generate definition
+
+## Use Cases
+
+### use case 1
+
+description of use case
+
+### ...
+
+### use case N
+
+description of use case
+
+## General Examples
+
+### Example 1: Title of example
+
+description of example
+
+<details>
+<summary> code (👆 click here to show) </summary>
+
+```js
+```
+
+</details>
+
+### ...
+
+### Example N: Title of example
+
+<details>
+<summary> code (👆 click here to show) </summary>
+
+```js
+```
+
+</details>
+
+## PROS and CONS
+
+<details><summary>PROS</summary>
+
+- pro #1
+- ...
+- pro #n
+
+</details>
+
+<details><summary>CONS</summary>
+
+- con #1
+- ...
+- con #n
+
+</details>
+
+## Conclusion
+
+Conclusion text about this pattern
