@@ -68,7 +68,7 @@ Same structure as `gdscript/` but with code written in **JavaScript**.
 - ✅ [Command Pattern](patterns/command/README.md)
 - ✅ [Flyweight Pattern](patterns/Flyweight/README.md)
 - 🚧 [Observer Pattern](#)
-- 🚧 [Prototype Pattern](#)
+- ✅ [Prototype Pattern](patterns/prototype/README.md)
 - 🚧 [Singleton Pattern](#)
 - 🚧 [State Pattern](#)
 
