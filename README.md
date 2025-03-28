@@ -6,7 +6,7 @@ Each pattern is accompanied by:
 
 - 📖 A theoretical explanation from the book
 - 🎮 Examples of use in video games
-- 💻 Practical implementations in<!--**GDScript (Godot)** and--> **JavaScript**
+- 💻 Practical implementations in **JavaScript**
 
 ## 📂 Repository Structure
 
@@ -20,26 +20,7 @@ example:
 
 `command/` pattern
 
-- Includes `README.md` with the **description of the Command Pattern**
-
-<!--
-
-### 2️. `gdscript/` - Implementations in Godot
-
-Contains **GDScript** implementations of the patterns with practical exercises.
-
-Each pattern has its own folder (`command/`, etc.) with:
-
-- `README.md`
-  
-  Contains a reference to the theory (`patterns/command/README.md`) and describes the exercises.
-
-- `ex_N_title/`
-  
-  Contains the file `ex_N_title.gd` with the exercise implementation.
-
--->
-
+- Includes `README.md` with the **description about the Command Pattern**
 
 ### 3️. `javascript/` - Implementations in JavaScript
 
@@ -49,11 +30,8 @@ Same structure as `gdscript/` but with code written in **JavaScript**.
 
 - `README.md` → General index of the repository with a list of implemented patterns.
 
-<!--
-- `CONTRIBUTING.md` → Guidelines for contributing to the project.
--->
-
 ## 📌 Implemented Patterns
+
 | legend | meaning |
 | --- | --- |
 | ✅ | Implemented |
@@ -101,7 +79,7 @@ Same structure as `gdscript/` but with code written in **JavaScript**.
 
 - A **detailed explanation** 📖
 - **Usage examples** in video games 🎮
-- **Practical implementations** in GDScript and JavaScript 💻  
+- **Practical implementations** in JavaScript 💻  
 
 ## 🛠️ How to Use This Repository
 
@@ -118,15 +96,10 @@ Read the explanations in **`patterns/`** to understand how each pattern works.
 
 ### 3️. Try the Code
 
-<!-- - To test the patterns in **Godot**, open the `gdscript/` folder in your project. -->
 - To test the patterns in **JavaScript**, you can open the exercise in browser using the provided `index.html`.
 
 ## 🎯 Project Goals
 
 - Study and implement the main **Design Patterns** used in video games.
 - Write **clear**, **organized**, and **reusable** code.
-- Improve programming skills in <!--**Godot** and--> **JavaScript**.
-
-<!--
-    If you have suggestions or want to contribute, feel free to open an issue or a pull request! 🚀
--->
+- Improve programming skills in **JavaScript**.
