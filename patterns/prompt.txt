@@ -37,7 +37,7 @@ description of example
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+```cpp
 ```
 
 </details>
@@ -49,7 +49,7 @@ description of example
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+```cpp
 ```
 
 </details>
@@ -76,8 +76,7 @@ description of example
 
 Conclusion text about this pattern
 
-PROMPT: using this markdown template compile it for this pattern (the link points to the extended summary u gave me before), 
-
-MUST: give me the output in markdown, examples written in javascript
-
-DONT: call the file ./nameofpattern-pattern.md -> example: ./prototype-pattern.md BUT call it ./prototype.md
+TOPIC: game-loop
+MUST:
+- give me the output in markdown
+- examples written in c++

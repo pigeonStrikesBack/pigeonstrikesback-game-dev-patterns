@@ -37,7 +37,7 @@ description of example
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+```cpp
 ```
 
 </details>
@@ -49,7 +49,7 @@ description of example
 <details>
 <summary> code (👆 click here to show) </summary>
 
-```js
+```cpp
 ```
 
 </details>
