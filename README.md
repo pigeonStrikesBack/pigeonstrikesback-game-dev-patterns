@@ -1,105 +1,132 @@
-# Game Programming Patterns - Implementations in<!-- GDScript and--> JavaScript
+# Game Programming Patterns - Implementations in C++ and JavaScript
 
-This repository contains practical implementations of **Design Patterns** for game development, based on the book [Game Programming Patterns by Robert Nystrom](https://gameprogrammingpatterns.com/).
+This repository contains practical implementations of **Design Patterns** for game development, inspired by the book [Game Programming Patterns by Robert Nystrom](https://gameprogrammingpatterns.com/).
 
 Each pattern is accompanied by:
 
-- 📖 A theoretical explanation from the book
-- 🎮 Examples of use in video games
-- 💻 Practical implementations in **JavaScript**
+- 📖 A theoretical explanation from the book  
+- 🎮 Examples of use in video games  
+- 💻 Practical implementations in **C++** (with some legacy JavaScript examples being migrated)
+
+---
 
 ## 📂 Repository Structure
 
-The repository is organized into three main sections:
+The repository is organized into several sections:
 
 ### 1. `patterns/` - Theory and Use Cases
 
-Contains explanations of each **design pattern** and examples of how they are used in video games.
+Includes clear explanations of each **design pattern**, along with references to how they’re used in real games.
 
-example:
+Example:
 
 `command/` pattern
 
-- Includes `README.md` with the **description about the Command Pattern**
+- Contains a `README.md` with the **Command Pattern theory and use cases**
 
-### 3️. `javascript/` - Implementations in JavaScript
+### 2. `src/` - C++ Implementations
 
-Same structure as `gdscript/` but with code written in **JavaScript**.
+Modern implementations of the patterns in **C++**, ideal for performance-sensitive and low-level control use cases in game development.
 
-### 4️. Other Important Files
+- Visual implementations may use [**Raylib**](https://www.raylib.com/) or the [**raylib-cpp**](https://github.com/RobLoach/raylib-cpp) wrapper.
+- Each pattern is isolated in its own subfolder.
 
-- `README.md` → General index of the repository with a list of implemented patterns.
+### 3. `javascript/` - Legacy JavaScript Implementations (Being Migrated)
+
+- Contains original implementations in **JavaScript**.
+- These are gradually being ported to C++ (in `src/`), prioritizing patterns that benefit more from low-level handling.
+
+---
 
 ## 📌 Implemented Patterns
 
-| legend | meaning |
-| --- | --- |
-| ✅ | Implemented |
-| 🚧 | Work In Progress |
+| Legend | Meaning |
+| ------ | ------- |
+| ✅     | Implemented |
+| 🚧     | Work In Progress |
 
 ### Design Patterns Revisited
 
-> [Design Patterns: Elements of Reusable Object-Oriented Software](https://isbndb.com/book/9780201633610)
->
+> [Design Patterns: Elements of Reusable Object-Oriented Software](https://isbndb.com/book/9780201633610)  
 > Revisited by [Robert Nystrom](https://stuffwithstuff.com/)
 
-- ✅ [Command Pattern](patterns/command/README.md)
-- ✅ [Flyweight Pattern](patterns/Flyweight/README.md)
-- ✅ [Observer Pattern](patterns/observer/README.md)
-- ✅ [Prototype Pattern](patterns/prototype/README.md)
-- 🚧 [Singleton Pattern](#)
-- 🚧 [State Pattern](#)
+| Pattern             | C++ (`src/`) | JS (`javascript/`) |
+|---------------------|--------------|---------------------|
+| Command             | 🚧            | ✅                  |
+| Flyweight           | 🚧            | ✅                  |
+| Observer            | 🚧            | ✅                  |
+| Prototype           | 🚧            | ✅                  |
+| Singleton           | 🚧            | ✅                  |
+| State               | 🚧            | ✅                  |
 
 ### Sequencing Patterns
 
-- 🚧 [Double Buffer](#)
-- 🚧 [Game Loop](#)
-- 🚧 [Update Method](#)
+| Pattern | C++ (`src/`) |
+| --- | --- |
+| Double Buffer | ✅ |
+| Game Loop | ✅ |
+| Update Method | ✅ |
 
 ### Behavioral Patterns
 
-- 🚧 [Bytecode](#)
-- 🚧 [Subclass Sandbox](#)
-- 🚧 [Type Object](#)
+| Pattern | C++ (`src/`) |
+| --- | --- |
+| Bytecode | 🚧 |
+| Subclass Sandbox | 🚧 |
+| Type Object | 🚧 |
 
 ### Decoupling Patterns
 
-- 🚧 [Component](#)
-- 🚧 [Event Queue](#)
-- 🚧 [Service Locator](#)
+| Pattern | C++ (`src/`) |
+| --- | --- |
+| Component | 🚧 |
+| Event Queue | 🚧 |
+| Service Locator | 🚧 |
 
 ### Optimization Patterns
 
-- 🚧 [Data Locality](#)
-- 🚧 [Dirty Flag](#)
-- 🚧 [Object Pool](#)
-- 🚧 [Spatial Partition](#)
+| Pattern | C++ (`src/`) |
+| --- | --- |
+| Data Locality | 🚧 |
+| Dirty Flag | 🚧 |
+| Object Pool | 🚧 |
+| Spatial Partition | 🚧 |
+
+---
 
 ### Each pattern includes:
 
-- A **detailed explanation** 📖
-- **Usage examples** in video games 🎮
-- **Practical implementations** in JavaScript 💻  
+- 📖 A **detailed explanation**
+- 🎮 **Usage examples** in video games
+- 💻 **Practical implementations** in **C++ (`src/`)** or **JavaScript (`javascript/`)**  
+
+---
 
 ## 🛠️ How to Use This Repository
 
 ### 1. Clone the Repository
 
-```sh
+```bash
 git clone https://github.com/pigeonStrikesBack/pigeonstrikesback-game-dev-patterns.git
 cd pigeonstrikesback-game-dev-patterns
 ```
 
-### 2️. Explore the Theory
+### 2. Explore the Theory
 
-Read the explanations in **`patterns/`** to understand how each pattern works.
+Start with the theory in `patterns/` to understand how each pattern works in a game context.
 
-### 3️. Try the Code
+### 3. Try the Code
 
-- To test the patterns in **JavaScript**, you can open the exercise in browser using the provided `index.html`.
+- For **C++** examples (`src/`):  
+  Build and run them using your C++ toolchain. If visuals are included, make sure [Raylib](https://www.raylib.com/) or [raylib-cpp](https://github.com/RobLoach/raylib-cpp) is properly set up.
+
+- For **JavaScript** examples (`javascript/`):  
+  You can run them in your browser using the provided `index.html` files.
+
+---
 
 ## 🎯 Project Goals
 
-- Study and implement the main **Design Patterns** used in video games.
-- Write **clear**, **organized**, and **reusable** code.
-- Improve programming skills in **JavaScript**.
+- Explore and implement classic and modern **Game Programming Patterns**
+- Focus on **performance**, **readability**, and **reusability**
+- Transition from high-level scripting (JS) to low-level systems (C++) to better reflect real-world game development
