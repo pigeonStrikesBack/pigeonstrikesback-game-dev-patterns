@@ -28,7 +28,7 @@ Example:
 
 Modern implementations of the patterns in **C++**, ideal for performance-sensitive and low-level control use cases in game development.
 
-- Visual implementations may use [**Raylib**](https://www.raylib.com/) or the [**raylib-cpp**](https://github.com/RobLoach/raylib-cpp) wrapper.
+- Visual implementations use [**Raylib**](https://www.raylib.com/), a simple and easy-to-use game programming library in C.
 - Each pattern is isolated in its own subfolder.
 
 ### 3. `javascript/` - Legacy JavaScript Implementations (Being Migrated)
@@ -118,7 +118,18 @@ Start with the theory in `patterns/` to understand how each pattern works in a g
 ### 3. Try the Code
 
 - For **C++** examples (`src/`):  
-  Build and run them using your C++ toolchain. If visuals are included, make sure [Raylib](https://www.raylib.com/) or [raylib-cpp](https://github.com/RobLoach/raylib-cpp) is properly set up.
+  To compile the C++ examples, you will need [Raylib](https://www.raylib.com/), a simple and easy-to-use game programming library in C. You can download and install it from the [Raylib website](https://www.raylib.com/index.html).  
+
+  After Raylib is installed, you can use CMake to build the examples:
+
+  ```bash
+  mkdir build
+  cd build
+  cmake ..
+  make
+  ```
+
+  The compiled binaries will appear in the `bin/` directory inside the build folder.
 
 - For **JavaScript** examples (`javascript/`):  
   You can run them in your browser using the provided `index.html` files.
@@ -130,3 +141,13 @@ Start with the theory in `patterns/` to understand how each pattern works in a g
 - Explore and implement classic and modern **Game Programming Patterns**
 - Focus on **performance**, **readability**, and **reusability**
 - Transition from high-level scripting (JS) to low-level systems (C++) to better reflect real-world game development
+
+---
+
+### Raylib Dependency for C++ Examples
+
+To build and run the C++ examples, you must have **Raylib** installed. Raylib is a simple and efficient game programming library. You can get it here:
+
+- [Raylib Website](https://www.raylib.com/index.html)
+
+Make sure to install Raylib or use the provided CMake configuration to link it to your project. If you're using a package manager like `apt`, `brew`, or `zypper`, you can install it directly from there.
