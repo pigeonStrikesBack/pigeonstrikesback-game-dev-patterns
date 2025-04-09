@@ -71,7 +71,7 @@ Modern implementations of the patterns in **C++**, ideal for performance-sensiti
 
 | Pattern | C++ (`src/`) |
 | --- | --- |
-| Bytecode | 🚧 |
+| Bytecode | ✅ |
 | Subclass Sandbox | 🚧 |
 | Type Object | 🚧 |
 
