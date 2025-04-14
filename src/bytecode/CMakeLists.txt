@@ -2,4 +2,4 @@
 add_executable(bytecode-pattern bytecode.cpp)
 
 # Link Raylib to these executables
-target_link_libraries(bytecode-pattern raylib)
+# target_link_libraries(bytecode-pattern raylib)
