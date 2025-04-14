@@ -1,0 +1,1 @@
+add_executable(type-object monster.cpp monster.hpp type-object.cpp)

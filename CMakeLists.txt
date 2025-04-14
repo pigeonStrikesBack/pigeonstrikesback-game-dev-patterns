@@ -13,4 +13,4 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_subdirectory(src)
 
 # Find and include Raylib
-find_package(raylib REQUIRED)
+# find_package(raylib REQUIRED)
