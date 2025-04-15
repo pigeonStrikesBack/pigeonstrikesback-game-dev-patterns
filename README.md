@@ -72,14 +72,14 @@ Modern implementations of the patterns in **C++**, ideal for performance-sensiti
 | Pattern | C++ (`src/`) |
 | --- | --- |
 | Bytecode | ✅ |
-| Subclass Sandbox | 🚧 |
-| Type Object | 🚧 |
+| Subclass Sandbox | ✅ |
+| Type Object | ✅ |
 
 ### Decoupling Patterns
 
 | Pattern | C++ (`src/`) |
 | --- | --- |
-| Component | 🚧 |
+| Component | ✅ |
 | Event Queue | 🚧 |
 | Service Locator | 🚧 |
 
