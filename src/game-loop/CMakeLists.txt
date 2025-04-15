@@ -2,4 +2,4 @@
 add_executable(game-loop game-loop.cpp)
 
 # Link Raylib
-target_link_libraries(game-loop)
+# target_link_libraries(game-loop)

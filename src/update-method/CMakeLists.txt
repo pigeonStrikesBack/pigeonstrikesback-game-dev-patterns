@@ -2,4 +2,4 @@
 add_executable(update-method update-method.cpp)
 
 # Link Raylib
-target_link_libraries(update-method)
+# target_link_libraries(update-method)

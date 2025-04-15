@@ -1,0 +1,1 @@
+add_executable(component component.cpp) #game-object.hpp game-object.cpp component.cpp)
