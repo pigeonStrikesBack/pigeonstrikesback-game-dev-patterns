@@ -80,7 +80,7 @@ Modern implementations of the patterns in **C++**, ideal for performance-sensiti
 | Pattern | C++ (`src/`) |
 | --- | --- |
 | Component | ✅ |
-| Event Queue | 🚧 |
+| Event Queue | ✅ |
 | Service Locator | 🚧 |
 
 ### Optimization Patterns
