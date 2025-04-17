@@ -81,7 +81,7 @@ Modern implementations of the patterns in **C++**, ideal for performance-sensiti
 | --- | --- |
 | Component | ✅ |
 | Event Queue | ✅ |
-| Service Locator | 🚧 |
+| Service Locator | ✅ |
 
 ### Optimization Patterns
 
